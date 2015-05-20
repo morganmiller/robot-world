@@ -11,7 +11,7 @@ class Robot
     @birth_date  = data["birth_date"]
     @likes       = data["likes"]
     @dislikes    = data["dislikes"]
-    @avatar      = data["avatar"]
+    @avatar      = "https://robohash.org/#{@name}.png"
   end
 
 end
