@@ -9,14 +9,14 @@ class RobotWorld
       database['total']  ||= 0
       database['total']  += 1
       database['robots'] << {
-          "id"         => database['total'],
-          "name"       => robot[:name],
-          "city"       => robot[:city], 
-          "state"      => robot[:state], 
-          "birth_date" => robot[:birth_date],
-          "likes"      => robot[:likes],
-          "dislikes"   => robot[:dislikes],
-          "avatar"     => robot[:avatar]
+          "id"               => database['total'],
+          "name"             => robot[:name],
+          "city"             => robot[:city], 
+          "state"            => robot[:state], 
+          "birth_date"       => robot[:birth_date],
+          "join_date"        => robot[:join_date],
+          "favorite_color"   => robot[:favorite_color],
+          "avatar"           => robot[:avatar]
       }
     end
   end
@@ -46,13 +46,13 @@ class RobotWorld
   def self.update(id, data)
     database.transaction do
       target_bot = database['robots'].find { |bot| bot["id"] == id }
-      target_bot["name"]       = data[:name]
-      target_bot["city"]       = data[:city]
-      target_bot["state"]      = data[:state]
-      target_bot["birth_date"] = data[:birth_date]
-      target_bot["likes"]      = data[:likes]
-      target_bot["dislikes"]   = data[:dislikes]
-      target_bot["avatar"]     = data[:avatar]
+      target_bot["name"]             = data[:name]
+      target_bot["city"]             = data[:city]
+      target_bot["state"]            = data[:state]
+      target_bot["birth_date"]       = data[:birth_date]
+      target_bot["join_date"]        = data[:join_date]
+      target_bot["favorite_color"]   = data[:favorite_color]
+      target_bot["avatar"]           = data[:avatar]
     end
   end
   
