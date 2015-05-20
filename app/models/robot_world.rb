@@ -14,8 +14,8 @@ class RobotWorld
           "city"       => robot[:city], 
           "state"      => robot[:state], 
           "birth_date" => robot[:birth_date],
-          "hire_date"  => robot[:hire_date],
-          "department" => robot[:department],
+          "likes"      => robot[:likes],
+          "dislikes"   => robot[:dislikes],
           "avatar"     => robot[:avatar]
       }
     end
@@ -50,8 +50,8 @@ class RobotWorld
       target_bot["city"]       = data[:city]
       target_bot["state"]      = data[:state]
       target_bot["birth_date"] = data[:birth_date]
-      target_bot["hire_date"]  = data[:hire_date]
-      target_bot["department"] = data[:department]
+      target_bot["likes"]      = data[:likes]
+      target_bot["dislikes"]   = data[:dislikes]
       target_bot["avatar"]     = data[:avatar]
     end
   end

@@ -1,0 +1,13 @@
+<h1>Edit Info</h1>
+
+<form action="/robots/<%= @robot.id %>" method="POST">
+  <input type="hidden" value="PUT" name="_method">
+  Name: <input type='text' name='robot[name]' value="<%= @robot.name %>"><br/>
+  City: <input type='text' name='robot[city]' value="<%= @robot.city %>"><br/>
+  State: <input type='text' name='robot[state]' value="<%= @robot.state %>"><br/>
+  Birthday: <input type='text' name='robot[birth_date]' value="<%= @robot.birth_date %>"><br/>
+  Likes: <input type='text' name='robot[likes]' value="<%= @robot.likes %>"><br/>
+  Dislikes: <input type='text' name='robot[dislikes]' value="<%= @robot.dislikes %>"><br/>
+  Avatar URL: <input type='text' name='robot[avatar]' value="<%= @robot.avatar %>"><br/>
+  <input type="submit" value="Update Info">
+</form>

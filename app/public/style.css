@@ -1,0 +1,46 @@
+.container {
+  margin: auto;
+  width: 60%;
+}
+
+.side-image {
+  /*background: url(images/robot-love1.jpg) no-repeat center center fixed;*/
+  float: left;
+  width: 400px;
+}
+
+.content {
+  float: right;
+  width: 400px;
+  padding-top: 150px;
+  font-family: 'Fredericka the Great', cursive;
+  color: #bc170f
+}
+
+.blank-separator {
+  height: 50px;
+}
+
+.content ul {
+  margin: 0.75em 0;
+  padding: 0 1em;
+  list-style: none;
+}
+.content li:before {
+  content: "";
+  border-color: transparent #bc6669;
+  border-style: solid;
+  border-width: 0.35em 0 0.35em 0.45em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 0.9em;
+  position: relative;
+}
+
+.content a, a:link, a:visited, a:hover {
+  text-decoration: none;
+  color: #d98373
+}
+

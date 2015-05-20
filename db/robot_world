@@ -1,0 +1,23 @@
+---
+robots:
+- id: 1
+  name: sue
+  city: denver
+  state: CO
+  birth_date: 06/06/06
+  hire_date: sushi
+  department: ''
+  avatar: ''
+  likes: sushi
+  dislikes: rain
+- id: 2
+  name: simon
+  city: nashville
+  state: TN
+  birth_date: 09/09/09
+  hire_date: 
+  department: billing
+  avatar: ''
+  likes: dancing
+  dislikes: being asked to do the robot
+total: 2

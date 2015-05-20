@@ -1,7 +1,7 @@
 class Robot
   
   attr_reader :id, :name, :city, :state, :birth_date,
-              :hire_date, :department, :avatar
+              :likes, :dislikes, :avatar
 
   def initialize(data)
     @id          = data["id"]
@@ -9,8 +9,8 @@ class Robot
     @city        = data["city"]
     @state       = data["state"]
     @birth_date  = data["birth_date"]
-    @hire_date   = data["hire_date"]
-    @department  = data["department"]
+    @likes       = data["likes"]
+    @dislikes    = data["dislikes"]
     @avatar      = data["avatar"]
   end
 
