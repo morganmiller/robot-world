@@ -1,5 +1,10 @@
+<a href="/">Home</a> | 
 <a href="/robots">Robots list</a><br/>
 
-<img src="<%= @robot.avatar %>">
-<h1><%= @robot.name %></h1>
-<p><%= @robot.city %></p>
+<div class="side-image"><img src="<%= @robot.avatar %>"></div>
+
+<div class="content">
+  <h1><%= @robot.name %></h1>
+  <p><%= @robot.city.capitalize %>, <%= @robot.state.upcase %></p>
+  <p><%= @robot.sign %></p>
+</div>
