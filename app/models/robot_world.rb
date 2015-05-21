@@ -1,5 +1,4 @@
 require 'yaml/store'
-require_relative 'robot'
 
 class RobotWorld
   
@@ -59,6 +58,13 @@ class RobotWorld
   def self.delete(id)
     database.transaction do
       database['robots'].delete_if { |bot| bot["id"] == id }
+    end
+  end
+  
+  def self.delete_all
+    database.transaction do
+      database['robots'] = []
+      database['total'] = 0
     end
   end
 end
