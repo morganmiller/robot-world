@@ -3,12 +3,12 @@ require_relative '../test_helper'
 class RobotTest < Minitest::Test
   
   def setup
-    @data = { "name" => "bob",
-              "city" => "denver",
-              "state" => "CO",
-              "birth_date" => "02/02/2001",
-              "join_date" => "05/21/2014",
-              "favorite_color" => "green"}
+    @data = { :name => "bob",
+              :city => "denver",
+              :state => "CO",
+              :birth_date => "02/02/2001",
+              :join_date => "05/21/2014",
+              :favorite_color => "green"}
   end
   
   def test_attributes_are_parsed_right

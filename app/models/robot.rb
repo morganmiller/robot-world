@@ -1,21 +1,28 @@
+require 'date'
+
 class Robot
   
   attr_reader :id, :name, :city, :state, :birth_date,
               :join_date, :favorite_color, :avatar
 
   def initialize(data)
-    @id             = data["id"]
-    @name           = data["name"]
-    @city           = data["city"]
-    @state          = data["state"]
-    @birth_date     = data["birth_date"]
-    @join_date      = data["join_date"]
-    @favorite_color = data["favorite_color"]
+    @id             = data[:id]
+    @name           = data[:name]
+    @city           = data[:city]
+    @state          = data[:state]
+    @birth_date     = data[:birth_date]
+    @join_date      = data[:join_date]
+    @favorite_color = data[:favorite_color]
     @avatar         = "https://robohash.org/#{@name}.png"
   end
   
+  def birthday
+    format = birth_date[6..9] + '-' + birth_date[0..1] + '-' + birth_date[3..4]
+    Date.parse(format)
+  end
+  
   def sign
-    date = Date.parse(@birth_date).strftime("%m%d").to_i
+    date = birthday.strftime("%m%d").to_i
     if (321..419).to_a.include?(date)
       "Aries"
     elsif (420..520).to_a.include?(date)
