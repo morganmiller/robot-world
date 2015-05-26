@@ -2,7 +2,7 @@ require 'yaml/store'
 
 class RobotWorld
   def self.database
-    if ENV["TASK_MANAGER_ENV"] == 'test'
+    if ENV["ROBOT_WORLD_ENV"] == 'test'
       @database ||= Sequel.sqlite('db/robot_world_test.sqlite3')
     else
       @database ||= Sequel.sqlite('db/robot_world_dev.sqlite3')
